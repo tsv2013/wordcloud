@@ -1,0 +1,68 @@
+{
+  "name": "wordcloud",
+  "version": "0.0.1",
+  "description": "JavaScript wordcloud library",
+  "homepage": "https://",
+  "authors": [
+    "Serge T <@domain.com>"
+  ],
+  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "JavaScript",
+    "wordcloud",
+    "dashboard",
+    "widget"
+  ],
+  "moduleType": "umd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsv2013/wordcloud.git"
+  },
+  "scripts": {
+    "start": "webpack serve --config ./webpack.config.dev.js",
+    "start:e2e": "webpack serve --config ./webpack.config.e2e.js",
+    "build": "webpack --config ./webpack.config.js",
+    "build:types": "tsc sources/index.ts --declaration --emitDeclarationOnly --skipLibCheck --target es5 --moduleResolution node --experimentalDecorators true --outFile site/dist/wordcloud.d.ts && echo \"declare module 'wordcloud' { import main = require('index'); export = main; }\" >> site/dist/wordcloud.d.ts",
+    "test": "jest",
+    "test:dev": "jest --watch",
+    "e2e": "playwright test",
+    "doc:gen": "typedoc ./sources/index.ts --out ./site/docs --readme ./publish/doc-index.md --name 'table4js-components' --includeVersion  --customCss ./publish/table4js-theme.css --plugin ./publish/table4js-theme.js --hideGenerator",
+    "release": "standard-version --message \"Release: %s\"",
+    "format": "prettier --write ./index"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.32.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/jest": "^27.1.5",
+    "@types/node": "^7.0.5",
+    "@webpack-cli/serve": "^1.6.1",
+    "copy-webpack-plugin": "9",
+    "css-loader": "^6.7.3",
+    "generate-package-json-webpack-plugin": "^2.6.0",
+    "html-webpack-plugin": "latest",
+    "jest": ">=27.0.0 <28.0.0-0",
+    "jest-environment-jsdom": ">=27.0.0 <28.0.0-0",
+    "json-loader": "latest",
+    "mini-css-extract-plugin": "^2.7.5",
+    "prettier": "^2.8.7",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.62.0",
+    "sass-loader": "^8.0.2",
+    "standard-version": "^9.3.2",
+    "style-loader": "^0.23.1",
+    "svg-inline-loader": "^0.8.2",
+    "text-loader": "0.0.1",
+    "ts-jest": "^27.1.4",
+    "ts-loader": "latest",
+    "typedoc": "^0.22.15",
+    "typescript": "4.7.4",
+    "underscore": "^1.13.6",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^4.3.0",
+    "webpack-dev-server": "^4.13.2"
+  }
+}
