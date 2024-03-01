@@ -27,7 +27,7 @@
     "test": "jest",
     "test:dev": "jest --watch",
     "e2e": "playwright test",
-    "doc:gen": "typedoc ./sources/index.ts --out ./site/docs --readme ./publish/doc-index.md --name 'table4js-components' --includeVersion  --customCss ./publish/table4js-theme.css --plugin ./publish/table4js-theme.js --hideGenerator",
+    "doc:gen": "typedoc ./sources/index.ts --out ./site/docs --readme ./publish/doc-index.md --name 'wordcloud' --includeVersion  --customCss ./publish/wordcloud-theme.css --plugin ./publish/wordcloud-theme.js --hideGenerator",
     "release": "standard-version --message \"Release: %s\"",
     "format": "prettier --write ./index"
   },
